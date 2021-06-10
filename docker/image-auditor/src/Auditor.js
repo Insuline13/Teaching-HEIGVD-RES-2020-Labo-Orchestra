@@ -60,4 +60,4 @@ function updateActivity() {
 }
 
 /* Each 5 seconds get rid of non-active musicians */
-setInterval(updateActivity, 5000);
+setInterval(updateActivity, 1000);
