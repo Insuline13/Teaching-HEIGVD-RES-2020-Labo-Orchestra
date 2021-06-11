@@ -110,7 +110,7 @@ When you connect to the TCP interface of the **Auditor**, you should receive an 
 |Question | Who is going to **listen for UDP datagrams** and what should happen when a datagram is received? |
 | | L'auditeur écoute et reçoit les datagrammes UDP. Lorsqu'un datagramme est reçu, il met à jour sa liste de musiciens actifs. |
 |Question | What **payload** should we put in the UDP datagrams? |
-| | un JSON contenant un ID (uid) unique et un son. L'ID identifie le musicien. |
+| | Un JSON contenant un ID (uuid) unique et un son. L'ID identifie le musicien. |
 |Question | What **data structures** do we need in the UDP sender and receiver? When will we update these data structures? When will we query these data structures? |
 | | L'auditeur a besoin d'avoir un tableau qui stocke les musiciens actifs. Ce tableau est mis à jour à chaque nouvelle réception de datagrammes. Après 5 secondes d'inactivité des musiciens, ils sont supprimés de ce tableau par l'auditeur. Que cela soit pour les musiciens  et l'auditeur il faut un tableau qui permet de mapper un son à un instrument. |
 
@@ -132,7 +132,7 @@ When you connect to the TCP interface of the **Auditor**, you should receive an 
 |Question | In Node.js, how can we execute a function on a **periodic** basis? |
 | | Grâce à l'utilisation de la fonction `setInterval(callback,delay)`. |
 |Question | In Node.js, how can we **emit UDP datagrams**? |
-| | À l'aide du paquet `dgram`, en créant un socket et en utilisant la méthode `send` par exemple socket.send(message, 0, message.length, port, adresse IP multicast, callback). |
+| | À l'aide du paquet `dgram`, en créant un socket et en utilisant la méthode `send` par exemple `socket.send(message, 0, message.length, port, adresse IP multicast, callback)`. |
 |Question | In Node.js, how can we **access the command line arguments**? |
 | | En utilisant `process.argv[]`. |
 
